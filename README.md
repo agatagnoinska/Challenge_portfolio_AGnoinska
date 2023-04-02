@@ -9,3 +9,6 @@ oraz nie boję się klikać 😃
 
 ## Subtask 2: nie dotyczy
 
+## Subtask 3:
+Wynik testu purpurowego: 14/14
+![testpurpurowy.png](testpurpurowy.png)
