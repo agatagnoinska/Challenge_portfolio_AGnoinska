@@ -1,4 +1,5 @@
 # Task: Konfiguracja oprogramowania
+------------
 ## Subtask 1: Dlaczego zdecydowałam się wziąć udział w wyzwaniu Dare IT Challenge?
 Zastanawiam się nad zmianą pracy i branży. Mieliśmy 
 szkolenie w pracy powiązane z programowaniem i IT, 
