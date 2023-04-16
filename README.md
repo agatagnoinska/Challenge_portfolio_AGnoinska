@@ -15,6 +15,9 @@ Wynik testu purpurowego: 14/14
 ![testpurpurowy.png](testpurpurowy.png)
 
 # Task 2: Selektory
+
+## Subtask 1: Zadanie dodatkowe —> Nowy branch
+
 ## Subtask 2: Wyszukiwanie selektorów na stronie logowania
 https://scouts-test.futbolkolektyw.pl/en/login?redirected=true
 ### Pole do wpisania loginu:
@@ -68,3 +71,5 @@ sign_in_button_xpath
 * //*[contains(@class, "MuiButton-label")] 
 
 * //*[text()="Sign in"]
+
+## Subtask 3: Dodawanie selektorów do projektu
