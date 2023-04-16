@@ -10,6 +10,6 @@ class Dashboard(BasePage):
     print_button.xpath = "//*[contains( @ aria - label,'Print')]"
     view_columns_button-xpath = "//*[contains(@data-testid, 'olumn')]"
     filter_table_button_xpath = "//*[contains(@data-testid, 'Filt')]"
-    netx_page_button_xpath= "//*[@id='pagination-next']"
+    next_page_button_xpath= "//*[@id='pagination-next']"
 
 pass
