@@ -18,7 +18,7 @@ Wynik testu purpurowego: 14/14
 ## Subtask 2: Wyszukiwanie selektorów na stronie logowania
 https://scouts-test.futbolkolektyw.pl/en/login?redirected=true
 ### Pole do wpisania loginu:
-login_input_xpath
+login_field_xpath
 * //*[@id="login"]
 
 * //*[@name="login"]
@@ -26,7 +26,7 @@ login_input_xpath
 * //*[@type="text"]
 
 ### Pole do wpisania hasła:
-password_input_xpath
+password_field_xpath
 * //*[@id="password"]
 
 * //*[@name="password"]
