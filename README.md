@@ -73,3 +73,7 @@ sign_in_button_xpath
 * //*[text()="Sign in"]
 
 ## Subtask 3: Dodawanie selektorów do projektu
+
+## Subtask 4: Dodanie nowego pliku - dashboard
+
+## Subtask 5: Dodanie nowego pliku - add a match form
