@@ -1,7 +1,5 @@
 import time
-
 from pages.base_page import BasePage
-
 
 class AddPlayerForm(BasePage):
     menu_scouts_panel_button_xpath = "//*[@aria-label='menu']"

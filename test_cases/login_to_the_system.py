@@ -22,8 +22,9 @@ class TestLogInToSystem(unittest.TestCase):
         user_login.type_in_email('user01@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_on_the_sign_button()
-        # dashboard_page = Dashboard(self.driver)
-        # dashboard_page.title_of_page()
+        time.sleep(8)
+        dashboard_page = Dashboard(self.driver)
+        dashboard_page.title_of_page()
 
     @classmethod
     def tearDown(self):

@@ -1,7 +1,5 @@
 import time
-
 from pages.base_page import BasePage
-
 
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
