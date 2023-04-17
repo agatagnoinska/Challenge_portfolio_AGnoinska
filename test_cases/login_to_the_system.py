@@ -18,6 +18,7 @@ class TestLogInToSystem(unittest.TestCase):
     def test_log_in_to_system(self):
         user_login = LoginPage(self.driver)
         time.sleep(5)
+        user_login.assert_elements()
         user_login.title_of_page()
         user_login.type_in_email('user01@getnada.com')
         user_login.type_in_password('Test-1234')
