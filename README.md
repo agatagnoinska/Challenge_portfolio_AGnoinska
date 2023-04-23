@@ -77,3 +77,6 @@ sign_in_button_xpath
 ## Subtask 4: Dodanie nowego pliku - dashboard
 
 ## Subtask 5: Dodanie nowego pliku - add a match form
+
+# Task 4
+[Link do dysku Google z TC](https://docs.google.com/spreadsheets/d/14J4yXBMRoxodTpoGl9vdnmrYKGbPwNlvBp94WR_bpdI/edit?usp=sharing)
