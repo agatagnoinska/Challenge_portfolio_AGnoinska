@@ -15,8 +15,11 @@ class AddPlayerForm(BasePage):
     age_field_xpath = '//*[@name="age"]'
     main_position_field_xpath = '//*[@name="mainPosition"]'
     submit_button_xpath = '//*[@type="submit"]'
+    header_of_edit_player_page_path= '//form/div[1]/div/span'
     add_a_player_form_url = ("https://scouts-test.futbolkolektyw.pl/en/players/add")
     expected_title = "Add player"
+    expected_header_of_edit_player = 'Edit player'
+
     # def type_in_email(self, email):
     #     self.field_send_keys(self.login_field_xpath, email)
     #
@@ -32,4 +35,19 @@ class AddPlayerForm(BasePage):
     def title_of_page_add_player_form(self):
         time.sleep(6)
         assert self.get_page_title(self.add_a_player_form_url) == self.expected_title
+
+    def fill_name(self, name):
+        self.field_send_keys(self.name_field_xpath, name)
+
+    def fill_surname(self, surname):
+        self.field_send_keys(self.surname_field_xpath, surname)
+
+    def fill_age(self, age):
+        self.field_send_keys(self.age_field_xpath, age)
+
+    def fill_main_position(self, main_position):
+        self.field_send_keys(self.main_position_field_xpath, main_position)
+
+    def click_on_the_submit_button(self):
+        self.click_on_the_element(self.submit_button_xpath)
 pass
