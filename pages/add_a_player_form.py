@@ -15,10 +15,15 @@ class AddPlayerForm(BasePage):
     age_field_xpath = '//*[@name="age"]'
     main_position_field_xpath = '//*[@name="mainPosition"]'
     submit_button_xpath = '//*[@type="submit"]'
-    header_of_edit_player_page_path= '//form/div[1]/div/span'
+    header_of_edit_player_page_path = '//form/div[1]/div/span'
+    Added_player_successfully_pathx = '//*[@id="er5rwe2dco"]/div[1]'
+    clear_button_xpath = '//button[2]/span[1]'
     add_a_player_form_url = ("https://scouts-test.futbolkolektyw.pl/en/players/add")
     expected_title = "Add player"
     expected_header_of_edit_player = 'Edit player'
+    expected_text_name_after_clear = ''
+    expected_text_surname_after_clear = ''
+
 
     # def type_in_email(self, email):
     #     self.field_send_keys(self.login_field_xpath, email)
@@ -33,7 +38,7 @@ class AddPlayerForm(BasePage):
     #     return self.driver.find_element(selector_type, selector).click()
 
     def title_of_page_add_player_form(self):
-        time.sleep(6)
+        self.wait_for_element_to_be_clickable(self.main_page_button_xpath)
         assert self.get_page_title(self.add_a_player_form_url) == self.expected_title
 
     def fill_name(self, name):
@@ -49,5 +54,16 @@ class AddPlayerForm(BasePage):
         self.field_send_keys(self.main_position_field_xpath, main_position)
 
     def click_on_the_submit_button(self):
+        self.wait_for_element_to_be_clickable(self.submit_button_xpath)
         self.click_on_the_element(self.submit_button_xpath)
+
+    def click_on_clear_button(self):
+        self.wait_for_element_to_be_clickable(self.clear_button_xpath)
+        self.click_on_the_element(self.clear_button_xpath)
+
+    def assert_text_name_after_clear(self):
+        self.assert_element_text(self.driver, self.name_field_xpath, self.expected_text_name_after_clear)
+
+    def assert_text_surname_after_clear(self):
+        self.assert_element_text(self.driver, self.surname_field_xpath, self.expected_text_surname_after_clear)
 pass

@@ -17,10 +17,12 @@ class Dashboard(BasePage):
     last_updated_report_button_xpath = "//div[3]/div[3]/div/div/a[5]/button"
     dashboard_url = ("https://scouts-test.futbolkolektyw.pl/en")
     expected_title = "Scouts panel"
+    dashboard_title_xpath='/html/head/title'
 
     def title_of_page(self):
-        self.wait_for_element_to_be_clickable(self.main_page_button_xpath)
+        time.sleep(5)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
     def click_on_the_add_player_button(self):
+        self.wait_for_element_to_be_clickable(self.add_player_button_xpath)
         self.click_on_the_element(self.add_player_button_xpath)
 pass

@@ -39,3 +39,12 @@ class BasePage():
         element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
         time.sleep(3)
         #default_locator_type to xpath (jest ustwiony w pliku settings.py)
+        # tu lokator=selektor
+
+    def wait_for_presence_of_element(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+        wait = WebDriverWait(self.driver, 5)
+        element = wait.until(EC.presence_of_element_located((locator_type, locator)))
+
+    def wait_for_title(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+        wait = WebDriverWait(self.driver, 5)
+        element = wait.until(EC.title_is((locator_type, locator)))

@@ -29,20 +29,23 @@ class LoginPage(BasePage):
     # def field_send_keys(self, selector, value, locator_type=By.XPATH):
     #     return self.driver.find_element(locator_type, selector).send_keys(value)
     def click_on_the_sign_button(self):
+        self.wait_for_element_to_be_clickable(self.sign_in_button_xpath)
         self.click_on_the_element(self.sign_in_button_xpath)
     # def click_on_the_element(self, selector, selector_type=By.XPATH):
     #     return self.driver.find_element(selector_type, selector).click()
     def click_on_the_dropdown_language(self):
+        self.wait_for_element_to_be_clickable(self.language_selection_dropdown_xpath)
         self.click_on_the_element(self.language_selection_dropdown_xpath)
 
     def click_on_the_polish(self):
+        self.wait_for_element_to_be_clickable(self.language_Polish_button_xpath)
         self.click_on_the_element(self.language_Polish_button_xpath)
 
     def title_of_page(self):
-        time.sleep(7)
         assert self.get_page_title(self.login_url) == self.expected_title
 
     def assert_elements(self):
+        self.wait_for_presence_of_element(self.header_text_element_xpath)
         self.assert_element_text(self.driver, self.header_text_element_xpath, self.expected_text)
     # def assert_element_text(self, driver, xpath, expected_text):
     #     """Comparing expected text with observed value from web element
@@ -56,13 +59,17 @@ class LoginPage(BasePage):
     #     assert expected_text == element_text
 
     def assert_element_validation(self):
+        self.wait_for_presence_of_element(self.validation_wrong_login_xpath)
         self.assert_element_text(self.driver, self.validation_wrong_login_xpath, self.expected_validation_wrong_login)
 
     def assert_polish_translation_password(self):
+        self.wait_for_presence_of_element(self.password_label_xpath)
         self.assert_element_text(self.driver, self.password_label_xpath, self.expected_password_label_polish)
 
     def assert_polish_translation_signin(self):
+        self.wait_for_presence_of_element(self.sign_in_button_label_xpath)
         self.assert_element_text(self.driver, self.sign_in_button_label_xpath, self.expected_sign_in_button_polish)
 
     def assert_polish_translation_remind_password(self):
+        self.wait_for_presence_of_element(self.remind_password_label_xpath)
         self.assert_element_text(self.driver, self.remind_password_label_xpath, self.expected_remind_password_polish)

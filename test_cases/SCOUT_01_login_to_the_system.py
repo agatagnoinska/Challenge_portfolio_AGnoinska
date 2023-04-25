@@ -17,13 +17,12 @@ class TestLogInToSystem(unittest.TestCase):
         super(TestLogInToSystem, self).setUp(self)
     def test_log_in_to_system(self):
         user_login = LoginPage(self.driver)
-        time.sleep(5)
         user_login.assert_elements()
         user_login.title_of_page()
         user_login.type_in_email('user01@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_on_the_sign_button()
-        time.sleep(8)
+        time.sleep(3)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
 
