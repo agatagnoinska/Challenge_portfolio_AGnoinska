@@ -18,7 +18,7 @@ class AddingNewPlayer(unittest.TestCase):
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_adding_a_new_player(self):
-        TestLogInToSystem.test_log_in_to_system(self)
+       TestLogInToSystem.test_log_in_to_system(self)
         time.sleep(3)
         dashboard_page = Dashboard(self.driver)
         dashboard_page.click_on_the_add_player_button()

@@ -5,7 +5,7 @@ from pages.add_a_player_form import AddPlayerForm
 from pages.dashboard import Dashboard
 from test_cases.SCOUT_01_login_to_the_system import TestLogInToSystem
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
-import time
+
 
 class TestClearButton(unittest.TestCase):
     @classmethod
@@ -23,6 +23,7 @@ class TestClearButton(unittest.TestCase):
         add_player = AddPlayerForm(self.driver)
         add_player.fill_name('Adam')
         add_player.fill_surname('Nawałka')
+        add_player.click_on_clear_button()
         add_player.assert_text_name_after_clear()
         add_player.assert_text_surname_after_clear()
 
