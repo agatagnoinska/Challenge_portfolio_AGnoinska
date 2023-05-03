@@ -1,6 +1,7 @@
 import time
 from pages.base_page import BasePage
 
+
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
@@ -12,7 +13,7 @@ class LoginPage(BasePage):
     language_selection_dropdown_xpath = "//*[@aria-haspopup='listbox']"
     language_English_button_xpath = "//*[@data-value='en']"
     language_Polish_button_xpath = "//*[@data-value='pl']"
-    header_text_element_xpath= '//*[text()="Scouts Panel"]'
+    header_text_element_xpath = '//*[text()="Scouts Panel"]'
     validation_wrong_login_xpath = '//div/div[1]/div[3]/span'
     login_url = ("https://scouts-test.futbolkolektyw.pl/en")
     expected_title = "Scouts panel - sign in"
@@ -21,16 +22,19 @@ class LoginPage(BasePage):
     expected_password_label_polish = 'Hasło'
     expected_remind_password_polish = 'Przypomnij hasło'
     expected_sign_in_button_polish = 'ZALOGUJ'
+
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
 
     def type_in_password(self, password):
         self.field_send_keys(self.password_field_xpath, password)
+
     # def field_send_keys(self, selector, value, locator_type=By.XPATH):
     #     return self.driver.find_element(locator_type, selector).send_keys(value)
     def click_on_the_sign_button(self):
         self.wait_for_element_to_be_clickable(self.sign_in_button_xpath)
         self.click_on_the_element(self.sign_in_button_xpath)
+
     # def click_on_the_element(self, selector, selector_type=By.XPATH):
     #     return self.driver.find_element(selector_type, selector).click()
     def click_on_the_dropdown_language(self):
@@ -42,11 +46,13 @@ class LoginPage(BasePage):
         self.click_on_the_element(self.language_Polish_button_xpath)
 
     def title_of_page(self):
+        time.sleep(5)
         assert self.get_page_title(self.login_url) == self.expected_title
 
     def assert_elements(self):
         self.wait_for_presence_of_element(self.header_text_element_xpath)
         self.assert_element_text(self.driver, self.header_text_element_xpath, self.expected_text)
+
     # def assert_element_text(self, driver, xpath, expected_text):
     #     """Comparing expected text with observed value from web element
     #         :param driver: webdriver instance
