@@ -66,4 +66,8 @@ class AddPlayerForm(BasePage):
 
     def assert_text_surname_after_clear(self):
         self.assert_element_text(self.driver, self.surname_field_xpath, self.expected_text_surname_after_clear)
+
+    def click_on_the_main_page_button(self):
+        self.wait_for_element_to_be_clickable(self.main_page_button_xpath)
+        self.click_on_the_element(self.main_page_button_xpath)
 pass

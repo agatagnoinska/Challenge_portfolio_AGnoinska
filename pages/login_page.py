@@ -15,7 +15,7 @@ class LoginPage(BasePage):
     language_Polish_button_xpath = "//*[@data-value='pl']"
     header_text_element_xpath = '//*[text()="Scouts Panel"]'
     validation_wrong_login_xpath = '//div/div[1]/div[3]/span'
-    login_url = ("https://scouts-test.futbolkolektyw.pl/en")
+    login_url = ("https://scouts.futbolkolektyw.pl/en/")
     expected_title = "Scouts panel - sign in"
     expected_text = "Scouts Panel"
     expected_validation_wrong_login = 'Identifier or password invalid.'
@@ -46,23 +46,12 @@ class LoginPage(BasePage):
         self.click_on_the_element(self.language_Polish_button_xpath)
 
     def title_of_page(self):
-        time.sleep(5)
+        self.wait_for_element_to_be_clickable(self.header_text_element_xpath)
         assert self.get_page_title(self.login_url) == self.expected_title
 
     def assert_elements(self):
         self.wait_for_presence_of_element(self.header_text_element_xpath)
         self.assert_element_text(self.driver, self.header_text_element_xpath, self.expected_text)
-
-    # def assert_element_text(self, driver, xpath, expected_text):
-    #     """Comparing expected text with observed value from web element
-    #         :param driver: webdriver instance
-    #         :param xpath: xpath to element with text to be observed
-    #         :param expected_text: text what we expecting to be found
-    #         :return: None
-    #     """
-    #     element = driver.find_element(by=By.XPATH, value=xpath)
-    #     element_text = element.text
-    #     assert expected_text == element_text
 
     def assert_element_validation(self):
         self.wait_for_presence_of_element(self.validation_wrong_login_xpath)
@@ -79,3 +68,4 @@ class LoginPage(BasePage):
     def assert_polish_translation_remind_password(self):
         self.wait_for_presence_of_element(self.remind_password_label_xpath)
         self.assert_element_text(self.driver, self.remind_password_label_xpath, self.expected_remind_password_polish)
+
