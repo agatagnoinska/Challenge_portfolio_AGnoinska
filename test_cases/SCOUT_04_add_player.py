@@ -28,7 +28,7 @@ class TestAddingPlayer(unittest.TestCase):
         add_player.fill_main_position('strzelec')
         add_player.click_on_the_submit_button()
         add_player.click_on_the_main_page_button()
-        add_player.assert_element_text()
+        dashboard_page.assert_last_added_player()
     @classmethod
     def tearDown(self):
         self.driver.quit()

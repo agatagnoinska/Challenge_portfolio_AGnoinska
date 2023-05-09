@@ -48,3 +48,9 @@ class BasePage():
     def wait_for_title(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
         wait = WebDriverWait(self.driver, 5)
         element = wait.until(EC.title_is((locator_type, locator)))
+
+    def find_last_player(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+        return self.driver.find_element(locator_type, locator)
+
+
+

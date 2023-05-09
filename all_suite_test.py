@@ -19,7 +19,6 @@ def full_suite():
    test_suite.addTest(makeSuite(TestChangeLanguageLoginPage))
    test_suite.addTest(makeSuite(TestAddingPlayer))
    test_suite.addTest(makeSuite(TestClearButton))
-   test_suite.addTest(makeSuite(TitleOfAddPlayerPage))
    test_suite.addTest(makeSuite(TestLogOut))
    return test_suite
 

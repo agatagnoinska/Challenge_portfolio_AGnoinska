@@ -18,7 +18,7 @@ class AddPlayerForm(BasePage):
     header_of_edit_player_page_path = '//form/div[1]/div/span'
     Added_player_successfully_pathx = '//*[@id="er5rwe2dco"]/div[1]'
     clear_button_xpath = '//button[2]/span[1]'
-    add_a_player_form_url = ("https://scouts-test.futbolkolektyw.pl/en/players/add")
+    add_a_player_form_url = ("https://scouts.futbolkolektyw.pl/en/players/add")
     expected_title = "Add player"
     expected_header_of_edit_player = 'Edit player'
     expected_text_name_after_clear = ''

@@ -18,7 +18,7 @@ class Dashboard(BasePage):
     dashboard_url = ("https://scouts.futbolkolektyw.pl/en/")
     expected_title = "Scouts panel"
     dashboard_title_xpath='//*[@id="__next"]/div[1]/header/div/h6'
-    expected_name_surname_of_added_player = 'Adam Nawałka'
+    expected_added_player = 'Adam Nawałka'
     def title_of_page(self):
         time.sleep(5)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
@@ -29,8 +29,8 @@ class Dashboard(BasePage):
     def sign_out(self):
         self.wait_for_element_to_be_clickable(self.sign_out_button_xpath)
         self.click_on_the_element(self.sign_out_button_xpath)
-    def assert_element_text(self, driver, xpath, expected_text):
-        self.wait_for_presence_of_element(self.last_created_player_button_xpath)
-        self.assert_element_text(self.driver, self.last_created_player_button_xpath, self.expected_name_surname_of_added_player)
 
+    def assert_last_added_player(self):
+        last_added_player = self.find_last_player(self.last_created_player_button_xpath).text
+        assert self.expected_added_player == last_added_player
 pass

@@ -15,7 +15,7 @@ class LoginPage(BasePage):
     language_Polish_button_xpath = "//*[@data-value='pl']"
     header_text_element_xpath = '//*[text()="Scouts Panel"]'
     validation_wrong_login_xpath = '//div/div[1]/div[3]/span'
-    login_url = ("https://scouts.futbolkolektyw.pl/en/")
+    login_url = ("https://scouts.futbolkolektyw.pl/login")
     expected_title = "Scouts panel - sign in"
     expected_text = "Scouts Panel"
     expected_validation_wrong_login = 'Identifier or password invalid.'
@@ -46,7 +46,7 @@ class LoginPage(BasePage):
         self.click_on_the_element(self.language_Polish_button_xpath)
 
     def title_of_page(self):
-        self.wait_for_element_to_be_clickable(self.header_text_element_xpath)
+        self.wait_for_element_to_be_clickable(self.sign_in_button_xpath)
         assert self.get_page_title(self.login_url) == self.expected_title
 
     def assert_elements(self):

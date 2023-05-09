@@ -1,7 +1,6 @@
 import os
 import unittest
 from selenium import webdriver
-
 from pages.add_a_player_form import AddPlayerForm
 from pages.dashboard import Dashboard
 from test_cases.SCOUT_01_login_to_the_system import TestLogInToSystem

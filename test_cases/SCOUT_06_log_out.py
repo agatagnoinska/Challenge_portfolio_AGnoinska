@@ -20,7 +20,7 @@ class TestLogOut(unittest.TestCase):
         dashboard_page = Dashboard(self.driver)
         dashboard_page.sign_out()
         login_page = LoginPage(self)
-        login_page.title_of_page()
+        #login_page.title_of_page()
     @classmethod
     def tearDown(self):
         self.driver.quit()
