@@ -83,3 +83,14 @@ sign_in_button_xpath
 
 # Task 5
 [Link do nowego repozytorium Robotframe](https://github.com/agatagnoinska/panelscout_robotframework.git)
+
+# Task 6
+
+## Subtask 2: Zgłaszanie błędów
+[Link do zgłoszeń błędów](https://docs.google.com/spreadsheets/d/1aD5WUgXl1y0PQARG7lYIzVFW7d-R8ojjIPMqoNh1III/edit?usp=sharing)
+
+## Subtask 3: Raport z testów
+[Link do raportu](https://docs.google.com/spreadsheets/d/1fwa0rCe1ecpgbpMBy8nPBknA3tdgcWf3l3dpOxC6LlI/edit?usp=share_link)
+
+## Subtask 4: Portfolio
+
