@@ -93,4 +93,4 @@ sign_in_button_xpath
 [Link do raportu](https://docs.google.com/spreadsheets/d/1fwa0rCe1ecpgbpMBy8nPBknA3tdgcWf3l3dpOxC6LlI/edit?usp=share_link)
 
 ## Subtask 4: Portfolio
-
+[Link do portfolio](https://github.com/agatagnoinska/PORTFOLIO_Agata_Gnoinska/blob/074f598528677984d40c8aca54732c648b8af53b/README.md)
